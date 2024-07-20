@@ -1,0 +1,286 @@
+/* Default light mode styles */
+body {
+  background-color: white;
+  color: black;
+  min-height: 100vh; 
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+main {
+  flex: 1;
+}
+
+
+/* Styles for the app container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+  background-color: #f4f4f4; 
+}
+
+
+.content-container {
+  flex: 1; 
+  padding: 20px;
+  overflow: auto; 
+  box-sizing: border-box; 
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f8f9fa;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+input,select,textarea{
+  background-color: white;
+  color: black;
+}
+.navbar-dark {
+  background-color: #555;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+.dark-mode .navbar {
+  background-color: #555;
+}
+
+
+.btn-toggle {
+  margin-left: auto;
+}
+ .dark-mode .form-container,.dark-mode .table-container,.dark-mode td ,
+ .dark-mode input,.dark-mode .filter-container,.dark-mode .filter-container2,
+ .dark-mode table,.dark-mode select ,.dark-mode textarea,.dark-mode .content-container {
+  background-color: #444; 
+  color: #fff; 
+}
+
+
+/* Table Container */
+.form-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10%;
+  width: 80%;
+  position: relative;
+  top: 100px;
+  left: 0;
+  background-color: #f8f9fa;
+  padding: 0.5rem 1rem;
+  
+  transition: background-color 0.3s;
+}
+
+tbody{
+  width: 100%;
+}
+.table {
+  display: flex;
+  flex-direction: column;
+ 
+  
+
+  width: 100%;
+  position: relative;
+  top: 100px;
+  left: 0;
+  background-color: #f8f9fa;
+  padding: 0.5rem 1rem;
+  
+  transition: background-color 0.3s;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.table th {
+  background-color: #b1a6a6;
+}
+
+.grow{
+  flex-grow: 0.7;
+  width: 50% !important;
+}
+.grow1{
+  flex-grow: 0.125;
+  width: 12% !important;
+}
+.grow2{
+  flex-grow: 0.25;
+  width: 50% !important;
+}
+
+/* Form Styling */
+.form-container  {
+  width:60%;
+  margin-left: 20%;
+  display: flex;
+  flex-direction: column;
+}
+ th, td {
+  border-left: none !important;
+  border-right: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+.income-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.expense-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+
+.form-container label, .form-container input, .form-container textarea, .form-container select {
+  margin-bottom: 1rem;
+  width: 100% !important; 
+  
+}
+.income-amount {
+  color: green !important;
+  background-color: rgb(208, 239, 163);
+}
+
+.expense-amount {
+  color: red !important;
+  background-color: rgb(246, 170, 170);
+}
+/* Styles for filter container */
+.filter-container,.filter-container2 {
+  top: 100px;
+  display: flex;
+  position: relative;
+  justify-content:space-around;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+}
+
+.filter-container label {
+  top: 200px;
+  margin-right: 1rem;
+}
+
+.filter-container input,
+.filter-container select {
+  top:200px;
+  margin-left: 0.5rem;
+  padding: 0.25rem;
+}
+
+.chart-container {
+  width: 250px;
+  height: 250px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 20px;
+}
+.chart1{
+  width: 300px;
+  height: 300px
+}
+
+/* Responsive */
+
+@media (max-width: 770px) {
+  .chart-container {
+    width: 200px;
+    height: 200px; 
+    margin: 10px;
+  }
+  .chart1{
+    width: 200px;
+    height: 200px
+  }
+  .filter-container2 {
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+  }
+  .grow{
+   
+    width: 40% !important;
+  }
+  .grow1{
+   
+    width: 12% !important;
+  }
+  .grow2{
+  
+    width: 40% !important;
+  }
+  .form-container  {
+    width:90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 450px) {
+  .chart-container {
+    width: 150px;
+    height: 150px; 
+    margin: 7.5px;
+  }
+  .chart1{
+    width: 150px;
+    height: 150px
+  }
+  .filter-container2 {
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+  }
+td{
+  padding: 1px !important;
+}
+ 
+}
